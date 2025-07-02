@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Prep",
+    "version": "1.0",
+    "description": "AI-powered meeting prep assistant",
+    "permissions": [
+      "storage",
+      "notifications",
+      "identity",
+      "alarms",
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://www.googleapis.com/*"
+    ],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "Prep.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://calendar.google.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "icons": {
+      "16": "Prep.png",
+      "48": "Prep.png",
+      "128": "Prep.png"
+    }
+}

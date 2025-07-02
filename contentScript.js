@@ -1,0 +1,1 @@
+console.log("Prep content script loaded into Google Calendar.");
